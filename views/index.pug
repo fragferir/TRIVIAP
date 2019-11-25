@@ -1,30 +1,9 @@
-doctype html
-html
-  head
-  body
-    h1 Trivia
-    h4 Nueva pregunta 
-    form(action='/question' method='post')
-      input(name='question' placeholder='Pregunta')
-      br  
-      input(name='answerA' placeholder='Respuesta A')
-      input(name='checkboxA' type='checkbox' value='true')
-      br
-      input(name='answerB' placeholder='Respuesta B')  
-      input(name='checkboxB' type='checkbox' value='true')
-      br
-      input(name='answerC' placeholder='Respuesta C')
-      input(name='checkboxC' type='checkbox' value='true')  
-      br
-      input(name='answerD' placeholder='Respuesta D')  
-      input(name='checkboxD' type='checkbox' value='true')
-      br
-      input(type='submit' value='Guardar')
-    br      
-    ol
-      each question in questions
-        li= question.title
-          ol(type='A')
-            each answer in question.answers
-              li= answer.title
-                input(type='radio' value=answer.title name='answer') 
+extends layout
+
+block content
+  main.inner.cover(role='main')
+    h1.cover-heading TRIVIA FRANCO FERNANDEZ IROUME
+    p.lead texto test
+    p.lead texto test
+      a.btn.btn-lg.btn-secondary(href='/play') JUGA!
+  
